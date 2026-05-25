@@ -18,6 +18,7 @@ import type { IconType } from "react-icons";
 import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 import { SiGmail, SiOrcid } from "react-icons/si";
 import ScrollReveal from "./ScrollReveal";
+import ThemeToggle from "./ThemeToggle";
 
 type Tone = "teal" | "orange" | "violet" | "green" | "blue" | "rose";
 
@@ -283,10 +284,13 @@ export default function Home() {
             ))}
           </div>
 
-          <a className="nav-action" href="mailto:lucass235@gmail.com?subject=Contato pelo portfólio">
-            <SiGmail aria-hidden="true" size={17} />
-            Contato
-          </a>
+          <div className="nav-actions">
+            <ThemeToggle />
+            <a className="nav-action" href="mailto:lucass235@gmail.com?subject=Contato pelo portfólio">
+              <SiGmail aria-hidden="true" size={17} />
+              Contato
+            </a>
+          </div>
         </nav>
       </header>
 

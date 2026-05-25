@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -26,7 +27,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`
+            try {
+              var theme = localStorage.getItem("portfolio-theme");
+              document.documentElement.dataset.theme = theme === "light" ? "light" : "dark";
+            } catch (_) {
+              document.documentElement.dataset.theme = "dark";
+            }
+          `}
+        </Script>
+        {children}
+      </body>
     </html>
   );
 }
