@@ -15,7 +15,16 @@ import {
   Sparkles,
 } from "lucide-react";
 import type { IconType } from "react-icons";
-import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
+import {
+  FaFacebookF,
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPinterestP,
+  FaTwitch,
+  FaWhatsapp,
+  FaXTwitter,
+} from "react-icons/fa6";
 import { SiGmail, SiOrcid } from "react-icons/si";
 import ScrollReveal from "./ScrollReveal";
 import ThemeToggle from "./ThemeToggle";
@@ -29,7 +38,17 @@ type StackGroup = {
   items: string[];
 };
 
-type Brand = "github" | "linkedin" | "instagram" | "orcid" | "gmail" | "whatsapp";
+type Brand =
+  | "facebook"
+  | "github"
+  | "instagram"
+  | "linkedin"
+  | "orcid"
+  | "pinterest"
+  | "twitch"
+  | "x"
+  | "gmail"
+  | "whatsapp";
 
 type BrandLink = {
   label: string;
@@ -45,6 +64,12 @@ const navItems = [
 ];
 
 const socialLinks: BrandLink[] = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/Lucass235",
+    icon: FaFacebookF,
+    brand: "facebook",
+  },
   {
     label: "GitHub",
     href: "https://github.com/lucass235",
@@ -62,6 +87,24 @@ const socialLinks: BrandLink[] = [
     href: "https://www.instagram.com/_lucaasamorim_/",
     icon: FaInstagram,
     brand: "instagram",
+  },
+  {
+    label: "Pinterest",
+    href: "https://pinterest.com/Lucass601",
+    icon: FaPinterestP,
+    brand: "pinterest",
+  },
+  {
+    label: "Twitch",
+    href: "https://www.twitch.tv/lucass601",
+    icon: FaTwitch,
+    brand: "twitch",
+  },
+  {
+    label: "X",
+    href: "https://twitter.com/lucass235",
+    icon: FaXTwitter,
+    brand: "x",
   },
   {
     label: "ORCID",
