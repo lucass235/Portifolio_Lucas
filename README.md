@@ -1,32 +1,28 @@
-<br/>
+# Portfólio Lucas Amorim
 
-<h1 align="center">Portifólio</h1>
+Portfólio profissional desenvolvido com Next.js, React e TypeScript para apresentar experiência, stack, projetos e contatos.
 
-<p align="center">
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-venha-conferir">Como Executar</a>
-</p>
+## Tecnologias
 
-<br>
-<hr>
+- Next.js
+- React
+- TypeScript
+- Lucide React
+- CSS responsivo sem dependência de Bootstrap
 
-## 🤩 Sobre
+## Como executar
 
-O projeto é um portifólio desenvolvidor por mim onde nele podemos explorar mais um pouco sobre minhas habilidades e também verificar alguns dos meus projetos podendo
-também entrar em contato comigo atravez das funções de contato que se encontra no site. Pode ficar a vontade para explorar!!!
+```bash
+npm install
+npm run dev
+```
 
+Abra `http://localhost:3000`.
 
-## ✨ Tecnologias
+## Build
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+```bash
+npm run build
+```
 
-- [Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-- [Css](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-- [Bootstrap](https://getbootstrap.com/)
-- [Fonte Awesome](https://fontawesome.com/)
-
-## 🚀 Venha conferir 
-
-- [Meu Portfólio](https://portifolio-programacao-web.vercel.app/)
-
+Site publicado em: https://portifolio-programacao-web.vercel.app/
