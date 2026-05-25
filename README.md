@@ -1,16 +1,17 @@
-# Portfólio Lucas Amorim
+# Portfolio Lucas Amorim
 
-Portfólio profissional desenvolvido com Next.js, React e TypeScript para apresentar experiência, stack, projetos e contatos.
+Portfolio profissional desenvolvido com Next.js, React e TypeScript para apresentar experiencia, stack, formacao, contatos e redes sociais.
 
-## Tecnologias
+## Stack
 
-- Next.js
-- React
+- Next.js 16
+- React 19
 - TypeScript
 - Lucide React
-- CSS responsivo sem dependência de Bootstrap
+- React Icons
+- CSS responsivo com dark mode por padrao
 
-## Como executar
+## Rodar localmente
 
 ```bash
 npm install
@@ -19,10 +20,22 @@ npm run dev
 
 Abra `http://localhost:3000`.
 
-## Build
+## Validacao
 
 ```bash
+npm run typecheck
 npm run build
+npm audit --audit-level=moderate
 ```
+
+## Deploy na Vercel
+
+A Vercel detecta Next.js automaticamente.
+
+- Framework Preset: `Next.js`
+- Install Command: `npm install`
+- Build Command: `npm run build`
+- Output Directory: deixe vazio
+- Node.js: `>=20.9.0`
 
 Site publicado em: https://portifolio-programacao-web.vercel.app/

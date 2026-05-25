@@ -10,6 +10,7 @@
 /build
 /.next
 /out
+.tmp/
 *.tsbuildinfo
 
 npm-debug.log*
