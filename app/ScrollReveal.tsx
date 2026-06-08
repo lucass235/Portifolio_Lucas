@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-export default function ScrollReveal() {
+export default function ScrollReveal({ refreshKey }: { refreshKey?: string }) {
   useEffect(() => {
     const animatedElements = Array.from(
       document.querySelectorAll<HTMLElement>("[data-animate]"),
@@ -52,7 +52,7 @@ export default function ScrollReveal() {
       window.clearTimeout(fallback);
       observer.disconnect();
     };
-  }, []);
+  }, [refreshKey]);
 
   return null;
 }

@@ -33,8 +33,11 @@ export default function RootLayout({
             try {
               var theme = localStorage.getItem("portfolio-theme");
               document.documentElement.dataset.theme = theme === "light" ? "light" : "dark";
+              var language = localStorage.getItem("portfolio-language");
+              document.documentElement.lang = language === "en" ? "en" : "pt-BR";
             } catch (_) {
               document.documentElement.dataset.theme = "dark";
+              document.documentElement.lang = "pt-BR";
             }
           `}
         </Script>

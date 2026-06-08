@@ -150,6 +150,8 @@ img {
 .contact-actions a,
 .footer-socials a,
 .theme-toggle,
+.language-toggle,
+.language-toggle button,
 .nav-action,
 .nav-links a {
   transition:
@@ -188,6 +190,7 @@ img {
 .nav-links,
 .nav-actions,
 .theme-toggle,
+.language-toggle,
 .nav-action,
 .button,
 .hero-tags span,
@@ -259,6 +262,47 @@ img {
   border-color: color-mix(in srgb, var(--teal) 42%, var(--border));
 }
 
+.language-toggle {
+  min-height: 42px;
+  gap: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 4px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.language-toggle svg {
+  margin-left: 6px;
+  color: var(--ink-soft);
+  flex: 0 0 auto;
+}
+
+.language-toggle button {
+  min-height: 32px;
+  border: 0;
+  border-radius: calc(var(--radius) - 3px);
+  padding: 0 9px;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+}
+
+.language-toggle button[aria-pressed="true"] {
+  background: var(--teal);
+  color: #06110d;
+}
+
+.language-toggle button:hover {
+  color: var(--ink);
+}
+
+.language-toggle button[aria-pressed="true"]:hover {
+  color: #06110d;
+}
+
 .nav-action {
   min-height: 42px;
   gap: 8px;
@@ -271,6 +315,7 @@ img {
 
 .brand:hover .brand-mark,
 .theme-toggle:hover,
+.language-toggle:hover,
 .nav-action:hover,
 .nav-links a:hover {
   transform: translateY(-1px);
@@ -1086,8 +1131,12 @@ img {
     padding: 10px;
   }
 
+  .language-toggle button {
+    padding: 0 8px;
+  }
+
   .nav-action svg,
-  .theme-toggle span {
+  .language-toggle svg {
     display: none;
   }
 

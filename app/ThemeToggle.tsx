@@ -1,14 +1,26 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Moon } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 
 type Theme = "dark" | "light";
+type ThemeToggleLabels = {
+  dark: string;
+  light: string;
+  toggle: string;
+};
 
 const STORAGE_KEY = "portfolio-theme";
+const DEFAULT_LABELS: ThemeToggleLabels = {
+  dark: "Modo escuro",
+  light: "Modo claro",
+  toggle: "Alternar tema",
+};
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ labels = DEFAULT_LABELS }: { labels?: ThemeToggleLabels }) {
   const [theme, setTheme] = useState<Theme>("dark");
+  const isDark = theme === "dark";
+  const label = isDark ? labels.dark : labels.light;
 
   useEffect(() => {
     const storedTheme = window.localStorage.getItem(STORAGE_KEY);
@@ -30,13 +42,13 @@ export default function ThemeToggle() {
     <button
       type="button"
       className="theme-toggle"
-      aria-label="Alternar dark mode"
-      aria-pressed={theme === "dark"}
-      title="Alternar dark mode"
+      aria-label={labels.toggle}
+      aria-pressed={isDark}
+      title={labels.toggle}
       onClick={toggleTheme}
     >
-      <Moon aria-hidden="true" size={17} />
-      <span>Dark mode</span>
+      {isDark ? <Moon aria-hidden="true" size={17} /> : <Sun aria-hidden="true" size={17} />}
+      <span>{label}</span>
     </button>
   );
 }
