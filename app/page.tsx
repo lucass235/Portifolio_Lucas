@@ -16,14 +16,9 @@ import {
 } from "lucide-react";
 import type { IconType } from "react-icons";
 import {
-  FaFacebookF,
   FaGithub,
   FaInstagram,
   FaLinkedinIn,
-  FaPinterestP,
-  FaTwitch,
-  FaWhatsapp,
-  FaXTwitter,
 } from "react-icons/fa6";
 import { SiGmail, SiOrcid } from "react-icons/si";
 import ScrollReveal from "./ScrollReveal";
@@ -39,16 +34,11 @@ type StackGroup = {
 };
 
 type Brand =
-  | "facebook"
   | "github"
   | "instagram"
   | "linkedin"
   | "orcid"
-  | "pinterest"
-  | "twitch"
-  | "x"
-  | "gmail"
-  | "whatsapp";
+  | "gmail";
 
 type BrandLink = {
   label: string;
@@ -64,12 +54,6 @@ const navItems = [
 ];
 
 const socialLinks: BrandLink[] = [
-  {
-    label: "Facebook",
-    href: "https://www.facebook.com/Lucass235",
-    icon: FaFacebookF,
-    brand: "facebook",
-  },
   {
     label: "GitHub",
     href: "https://github.com/lucass235",
@@ -87,24 +71,6 @@ const socialLinks: BrandLink[] = [
     href: "https://www.instagram.com/_lucaasamorim_/",
     icon: FaInstagram,
     brand: "instagram",
-  },
-  {
-    label: "Pinterest",
-    href: "https://pinterest.com/Lucass601",
-    icon: FaPinterestP,
-    brand: "pinterest",
-  },
-  {
-    label: "Twitch",
-    href: "https://www.twitch.tv/lucass601",
-    icon: FaTwitch,
-    brand: "twitch",
-  },
-  {
-    label: "X",
-    href: "https://twitter.com/lucass235",
-    icon: FaXTwitter,
-    brand: "x",
   },
   {
     label: "ORCID",
@@ -562,8 +528,8 @@ export default function Home() {
               <span className="contact-kicker">Contato</span>
               <h2 id="contact-title">Vamos conversar sobre produto, IA, dados ou segurança.</h2>
               <p>
-                Me chame por e-mail, LinkedIn ou WhatsApp para oportunidades, parcerias de
-                pesquisa e projetos envolvendo engenharia de software, RAG, CTI e automação.
+                Me chame por e-mail ou LinkedIn para oportunidades, parcerias de pesquisa e
+                projetos envolvendo engenharia de software, RAG, CTI e automação.
               </p>
             </div>
 
@@ -576,17 +542,6 @@ export default function Home() {
                   <SiGmail aria-hidden="true" size={20} />
                 </span>
                 <span>lucass235@gmail.com</span>
-              </a>
-              <a
-                className="brand-link brand-whatsapp"
-                href="https://api.whatsapp.com/send?phone=5581996479569&text=Oi%2C%20Lucas.%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar."
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="brand-icon">
-                  <FaWhatsapp aria-hidden="true" size={21} />
-                </span>
-                <span>WhatsApp</span>
               </a>
               <a
                 className="brand-link brand-linkedin"

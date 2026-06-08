@@ -852,28 +852,8 @@ img {
   --brand-color: #181717;
 }
 
-.brand-facebook {
-  --brand-color: #1877f2;
-}
-
 .brand-linkedin {
   --brand-color: #0a66c2;
-}
-
-.brand-pinterest {
-  --brand-color: #e60023;
-}
-
-.brand-twitch {
-  --brand-color: #9146ff;
-}
-
-.brand-x {
-  --brand-color: #000000;
-}
-
-.brand-whatsapp {
-  --brand-color: #25d366;
 }
 
 .brand-orcid {
