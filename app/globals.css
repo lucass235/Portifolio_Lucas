@@ -940,6 +940,26 @@ img {
   color: var(--footer-muted);
 }
 
+.footer-release {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  font-size: 0.82rem;
+}
+
+.footer-release a {
+  color: var(--footer-link-color);
+  font-weight: 800;
+}
+
+.footer-release a:hover {
+  color: var(--footer-ink);
+}
+
+.footer-release span {
+  color: var(--footer-muted);
+}
+
 .footer-socials {
   display: flex;
   flex-wrap: wrap;

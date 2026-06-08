@@ -139,6 +139,8 @@ type LanguageContent = {
   };
   footer: {
     tagline: string;
+    releaseLabel: string;
+    commitLabel: string;
   };
 };
 
@@ -157,6 +159,13 @@ type BrandLink = {
 };
 
 const LANGUAGE_STORAGE_KEY = "portfolio-language";
+const buildMetadata = {
+  commit: process.env.NEXT_PUBLIC_GIT_COMMIT_SHA ?? "local",
+  releaseTag: process.env.NEXT_PUBLIC_RELEASE_TAG ?? `v${process.env.NEXT_PUBLIC_APP_VERSION ?? "2.0.0"}`,
+  releaseUrl:
+    process.env.NEXT_PUBLIC_RELEASE_URL ??
+    "https://github.com/lucass235/Portifolio_Programacao_Web/releases",
+};
 
 const navItems: NavItem[] = [
   { label: "Sobre", href: "#sobre" },
@@ -412,6 +421,8 @@ const portfolioContent: Record<Language, LanguageContent> = {
     },
     footer: {
       tagline: "Engenharia de Software · CTI · IA aplicada · Recife-PE",
+      releaseLabel: "Release",
+      commitLabel: "commit",
     },
   },
   en: {
@@ -628,6 +639,8 @@ const portfolioContent: Record<Language, LanguageContent> = {
     },
     footer: {
       tagline: "Software Engineering · CTI · Applied AI · Recife-PE",
+      releaseLabel: "Release",
+      commitLabel: "commit",
     },
   },
 };
@@ -1005,6 +1018,14 @@ export default function Home() {
           <div>
             <strong>Lucas Amorim</strong>
             <p>{content.footer.tagline}</p>
+            <p className="footer-release">
+              <a href={buildMetadata.releaseUrl} target="_blank" rel="noreferrer">
+                {content.footer.releaseLabel} {buildMetadata.releaseTag}
+              </a>
+              <span>
+                {content.footer.commitLabel} {buildMetadata.commit}
+              </span>
+            </p>
           </div>
           <div className="footer-socials">
             {socialLinks.map((link) => (
