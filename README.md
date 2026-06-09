@@ -7,7 +7,7 @@
 
 Portfólio profissional de Lucas dos Santos Amorim Rêgo, desenvolvido com Next.js, React e TypeScript. O site apresenta experiência, formação, stack técnica, canais de contato e metadados de release para facilitar a rastreabilidade entre deploy, commit e versão.
 
-Site em produção: [portifolio-programacao-web.vercel.app](https://portifolio-programacao-web.vercel.app/)
+Site em produção: [portifolio-programacao-web.vercel.app](https://portifolio-lucas-theta.vercel.app/)
 
 ## Principais recursos
 
